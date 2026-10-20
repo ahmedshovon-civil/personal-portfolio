@@ -1,1 +1,343 @@
-index.html
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shovon | Civil Engineering Portfolio</title>
+
+    <meta name="description" content="Academic portfolio of Shovon, a Civil Engineering undergraduate at Nantong University, China.">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #f5f7fa;
+            color: #263445;
+            line-height: 1.7;
+        }
+
+        header {
+            background: #10243a;
+            color: white;
+            padding: 18px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        header h2 {
+            font-size: 22px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 20px;
+            font-size: 14px;
+        }
+
+        nav a:hover {
+            color: #65d6c4;
+        }
+
+        .hero {
+            background: linear-gradient(135deg, #10243a, #245779);
+            color: white;
+            padding: 90px 8%;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: clamp(32px, 5vw, 48px);
+            margin-bottom: 12px;
+        }
+
+        .hero h3 {
+            color: #65d6c4;
+            font-weight: 500;
+            margin-bottom: 18px;
+        }
+
+        .hero p {
+            max-width: 700px;
+            margin: auto;
+            color: #e2eaf1;
+        }
+
+        .button {
+            display: inline-block;
+            margin-top: 25px;
+            padding: 11px 24px;
+            background: #65d6c4;
+            color: #10243a;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .container {
+            max-width: 1050px;
+            margin: auto;
+            padding: 55px 22px;
+        }
+
+        section h2 {
+            color: #10243a;
+            font-size: 28px;
+            margin-bottom: 22px;
+        }
+
+        .card {
+            background: white;
+            padding: 25px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            box-shadow: 0 3px 14px rgba(20, 40, 60, 0.06);
+        }
+
+        .card h3 {
+            color: #245779;
+            margin-bottom: 8px;
+        }
+
+        .date {
+            color: #657587;
+            font-size: 14px;
+            margin-bottom: 10px;
+        }
+
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .tag {
+            background: #e1f3f0;
+            color: #174f50;
+            padding: 7px 13px;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+
+        .links a {
+            color: #176a86;
+            text-decoration: none;
+            margin-right: 18px;
+            font-weight: bold;
+        }
+
+        footer {
+            background: #10243a;
+            color: #dce5ed;
+            text-align: center;
+            padding: 25px;
+            font-size: 14px;
+        }
+
+        @media (max-width: 600px) {
+            header {
+                justify-content: center;
+                text-align: center;
+            }
+
+            nav a {
+                margin: 0 7px;
+            }
+
+            .hero {
+                padding: 65px 6%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h2>Shovon</h2>
+    <nav>
+        <a href=" ">About</a >
+        <a href="#education">Education</a >
+        <a href="#research">Research</a >
+        <a href="#projects">Projects</a >
+        <a href="#contact">Contact</a >
+    </nav>
+</header>
+
+<section class="hero">
+    <h1>A. S. M. Fardin Ahmed Shovon</h1>
+    <h3>Civil Engineering Undergraduate | Nantong University</h3>
+    <p>
+        A final-year Civil Engineering undergraduate in China with
+        a strong interest in structural engineering, sustainable
+        construction, environmental engineering, and innovative
+        construction materials.
+    </p >
+    <a class="button" href="#about">Explore My Portfolio</a >
+</section>
+
+<main>
+
+<section class="container" id="about">
+    <h2>About Me</h2>
+    <div class="card">
+        <p>
+            I am a Civil Engineering undergraduate at Nantong University,
+            China, with academic interests in structural engineering,
+            sustainable construction, and advanced cement-based materials.
+            My academic background includes structural analysis, mechanics
+            of materials, soil mechanics, foundation engineering, and
+            finite element analysis.
+        </p >
+        <br>
+        <p>
+            I am interested in exploring innovative construction
+            technologies and understanding the relationship between
+            material composition, microstructure, and mechanical
+            performance. I aspire to pursue postgraduate studies and
+            contribute to academic research in civil engineering.
+        </p >
+    </div>
+</section>
+
+<section class="container" id="education">
+    <h2>Education</h2>
+    <div class="card">
+        <h3>Bachelor's Degree in Civil Engineering</h3>
+        <p class="date">Nantong University, Nantong, China</p >
+        <p>Expected graduation: June 2027</p >
+        <p>Academic score to date: 85%</p >
+        <p>Scholarship: Second-Class Bachelor's Scholarship</p >
+    </div>
+</section>
+
+<section class="container" id="research">
+    <h2>Research Interests & Experience</h2>
+
+    <div class="card">
+        <h3>Sustainable Cement-Based Materials</h3>
+        <p>
+            Exploring recycled concrete powder (RCP) as a partial cement
+            replacement and investigating the effects of graphene oxide
+            and expansive agents on expansion, cracking, and mechanical
+            performance.
+        </p >
+    </div>
+
+    <div class="card">
+        <h3>3D-Printed Concrete</h3>
+        <p>
+            Studying 3D-printed concrete, with an interest in material
+            performance, interlayer bonding, structural behaviour, and
+            potential applications in construction.
+        </p >
+    </div>
+
+    <div class="card">
+        <h3>Research Interests</h3>
+        <div class="skills">
+            <span class="tag">Structural Engineering</span>
+            <span class="tag">Sustainable Construction</span>
+            <span class="tag">Recycled Materials</span>
+            <span class="tag">3D-Printed Concrete</span>
+            <span class="tag">Cement-Based Materials</span>
+            <span class="tag">Finite Element Analysis</span>
+        </div>
+    </div>
+</section>
+
+<section class="container" id="projects">
+    <h2>Academic Projects</h2>
+
+    <div class="card">
+        <h3>Pile Foundation Design for a Reinforced Concrete Building</h3>
+        <p>
+            Applied soil mechanics and structural engineering principles
+            to foundation design, including engineering calculations
+            and technical drawings.
+        </p >
+    </div>
+
+    <div class="card">
+        <h3>Reinforced Concrete Cast-in-Place Floor Slab Design</h3>
+        <p>
+            Worked on loading calculations, reinforcement arrangement,
+            and structural design considerations for a reinforced
+            concrete floor slab.
+        </p >
+    </div>
+
+    <div class="card">
+        <h3>Single-Storey Industrial Factory Building Design</h3>
+        <p>
+            Completed a course design project involving the structural
+            design of a single-storey industrial factory building.
+        </p >
+    </div>
+</section>
+
+<section class="container" id="skills">
+    <h2>Academic Skills</h2>
+    <div class="card">
+        <div class="skills">
+            <span class="tag">Structural Analysis</span>
+            <span class="tag">Mechanics of Materials</span>
+            <span class="tag">Soil Mechanics</span>
+            <span class="tag">Foundation Engineering</span>
+            <span class="tag">Finite Element Analysis</span>
+            <span class="tag">ANSYS</span>
+            <span class="tag">AutoCAD</span>
+            <span class="tag">Engineering Design</span>
+        </div>
+        <p style="margin-top: 15px; font-size: 14px;">
+            List software skills only at the level you can confidently
+            demonstrate.
+        </p >
+    </div>
+</section>
+
+<section class="container" id="contact">
+    <h2>Connect With Me</h2>
+    <div class="card">
+        <p>
+            I welcome academic connections and opportunities for
+            postgraduate study and research collaboration in civil
+            engineering.
+        </p >
+        <br>
+        <div class="links">
+            <!-- Replace the example links below with your actual profiles. -->
+            <a href="https://orcid.org/0009-0007-4286-6776"
+               target="_blank" rel="noopener noreferrer">ORCID</a >
+
+            <a href="https://github.com/YOUR-USERNAME"
+               target="_blank" rel="noopener noreferrer">GitHub</a >
+
+            <a href="https://www.linkedin.com/"
+               target="_blank" rel="noopener noreferrer">LinkedIn</a >
+        </div>
+    </div>
+</section>
+
+</main>
+
+<footer>
+    <p>© 2026 Shovon | Civil Engineering Academic Portfolio</p >
+    <p>Nantong University, China</p >
+</footer>
+
+</body>
+</html>
