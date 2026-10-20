@@ -1,358 +1,2029 @@
-
 <!DOCTYPE html>
+
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shovon | Civil Engineering Portfolio</title>
 
-    <meta name="description" content="Academic portfolio of Shovon, a Civil Engineering undergraduate at Nantong University, China.">
+  <meta charset="UTF-8">
 
-    <style>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-/* Structural Engineering Portfolio Theme */
+  <meta name="theme-color" content="#f4f4ef">
 
-body {
-    margin: 0;
-    font-family: Arial, Helvetica, sans-serif;
-    color: #233447;
-    background-color: #f4f6f8;
-    line-height: 1.7;
-}
+  <title>A S M FARDIN AHMED SHOVON | Civil Engineering</title>
 
-/* Engineering blueprint hero background */
-.hero {
-    position: relative;
-    overflow: hidden;
-    isolation: isolate;
-    padding: 100px 8%;
-    text-align: left;
-    color: #ffffff;
-    background-color: #10243a;
+  <meta name="description" content="Academic portfolio of A S M Fardin Ahmed Shovon, a Civil Engineering student interested in structural engineering, sustainable construction, and innovative construction materials.">
 
-    background-image:
-        linear-gradient(
-            rgba(16, 36, 58, 0.93),
-            rgba(16, 36, 58, 0.97)
-        ),
-        repeating-linear-gradient(
-            0deg,
-            transparent,
-            transparent 39px,
-            rgba(142, 193, 211, 0.20) 40px
-        ),
-        repeating-linear-gradient(
-            90deg,
-            transparent,
-            transparent 39px,
-            rgba(142, 193, 211, 0.20) 40px
-        );
-}
+  <link rel="preconnect" href="https://fonts.googleapis.com">
 
-/* Subtle structural-frame illustration */
-.hero::before {
-    content: "";
-    position: absolute;
-    z-index: -1;
-    top: 0;
-    right: -2%;
-    width: 42%;
-    height: 100%;
-    opacity: 0.5;
-    background:
-        linear-gradient(
-            90deg,
-            transparent 47%,
-            #77b7c5 48%,
-            #77b7c5 49%,
-            transparent 50%
-        ),
-        linear-gradient(
-            0deg,
-            transparent 24%,
-            #77b7c5 25%,
-            #77b7c5 26%,
-            transparent 27%,
-            transparent 49%,
-            #77b7c5 50%,
-            #77b7c5 51%,
-            transparent 52%,
-            transparent 74%,
-            #77b7c5 75%,
-            #77b7c5 76%,
-            transparent 77%
-        );
-    border-left: 2px solid rgba(119, 183, 197, 0.5);
-    transform: skewY(-8deg);
-    pointer-events: none;
-}
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-.hero h1 {
-    position: relative;
-    max-width: 800px;
-    font-size: clamp(32px, 5vw, 54px);
-    line-height: 1.2;
-    letter-spacing: 1px;
-    margin-bottom: 20px;
-}
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
-.hero h3 {
-    color: #65d6c4;
-    font-size: 18px;
-    font-weight: 500;
-}
+  <style>
 
-.hero p {
-    max-width: 650px;
-    color: #d8e2ec;
-    font-size: 17px;
-}
+    :root {
 
-/* Navigation */
-header {
-    background: #ffffff;
-    color: #10243a;
-    padding: 18px 8%;
-    border-bottom: 1px solid #dce3e9;
-}
+      --paper: #f4f4ef;
 
-header h2 {
-    color: #10243a;
-}
+      --white: #ffffff;
 
-nav a {
-    color: #263e54;
-    text-decoration: none;
-    margin-left: 20px;
-}
+      --ink: #202822;
 
-nav a:hover {
-    color: #168c8c;
-}
+      --muted: #737b72;
 
-/* Clean academic content cards */
-.container {
-    max-width: 1050px;
-    margin: auto;
-    padding: 55px 22px;
-}
+      --green: #254d3b;
 
-section h2 {
-    color: #10243a;
-    font-size: 28px;
-    letter-spacing: 0.3px;
-}
+      --green-light: #dce7dc;
 
-.card {
-    background: #ffffff;
-    padding: 26px;
-    margin-bottom: 22px;
-    border: 1px solid #e0e6eb;
-    border-left: 4px solid #3c9b9b;
-    border-radius: 4px;
-    box-shadow: 0 5px 18px rgba(16, 36, 58, 0.04);
-}
+      --line: #d9ddd5;
 
-.card h3 {
-    color: #245779;
-}
+      --orange: #b96f47;
 
-/* Engineering skill labels */
-.tag {
-    display: inline-block;
-    background: #e7f2f3;
-    color: #205b63;
-    padding: 7px 12px;
-    border: 1px solid #d0e5e7;
-    border-radius: 3px;
-    font-size: 13px;
-}
+      --mono: "DM Mono", monospace;
 
-/* Footer */
-footer {
-    background: #10243a;
-    color: #d8e2ec;
-    text-align: center;
-    padding: 25px;
-}
+      --sans: "DM Sans", sans-serif;
 
-    </style>
+      --display: "Manrope", sans-serif;
+
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+
+      background: var(--paper);
+
+      color: var(--ink);
+
+      font-family: var(--sans);
+
+      line-height: 1.65;
+
+      -webkit-font-smoothing: antialiased;
+
+    }
+
+    a { color: inherit; text-decoration: none; }
+
+    .container {
+
+      width: min(1160px, 88%);
+
+      margin: 0 auto;
+
+    }
+
+    .mono {
+
+      font-family: var(--mono);
+
+      font-size: 10px;
+
+      letter-spacing: 1.4px;
+
+      text-transform: uppercase;
+
+    }
+
+    .topline {
+
+      height: 5px;
+
+      background: var(--green);
+
+    }
+
+    header {
+
+      border-bottom: 1px solid var(--line);
+
+      background: rgba(244,244,239,.94);
+
+    }
+
+    nav {
+
+      min-height: 76px;
+
+      display: flex;
+
+      align-items: center;
+
+      justify-content: space-between;
+
+      gap: 24px;
+
+    }
+
+    .brand {
+
+      font-family: var(--display);
+
+      font-size: 14px;
+
+      font-weight: 800;
+
+      letter-spacing: -.4px;
+
+    }
+
+    .brand span {
+
+      display: block;
+
+      color: var(--muted);
+
+      font-family: var(--mono);
+
+      font-size: 9px;
+
+      font-weight: 400;
+
+      letter-spacing: 1.3px;
+
+      margin-top: 1px;
+
+    }
+
+    .nav-links {
+
+      display: flex;
+
+      gap: 27px;
+
+      align-items: center;
+
+      font-size: 12px;
+
+      color: #505950;
+
+    }
+
+    .nav-links a:hover { color: var(--orange); }
+
+    .nav-contact {
+
+      border: 1px solid var(--green);
+
+      padding: 9px 15px;
+
+      color: var(--green);
+
+      font-size: 11px;
+
+      font-weight: 700;
+
+    }
+
+    /* HERO */
+
+    .hero {
+
+      padding: 76px 0 68px;
+
+      border-bottom: 1px solid var(--line);
+
+    }
+
+    .hero-grid {
+
+      display: grid;
+
+      grid-template-columns: 1.1fr .9fr;
+
+      align-items: center;
+
+      gap: 65px;
+
+    }
+
+    .eyebrow {
+
+      display: flex;
+
+      align-items: center;
+
+      gap: 10px;
+
+      color: var(--green);
+
+      margin-bottom: 24px;
+
+    }
+
+    .eyebrow::before {
+
+      content: "";
+
+      width: 25px;
+
+      height: 2px;
+
+      background: var(--orange);
+
+    }
+
+    h1 {
+
+      font-family: var(--display);
+
+      font-size: clamp(39px, 5.2vw, 68px);
+
+      line-height: 1.08;
+
+      letter-spacing: -3.2px;
+
+      font-weight: 700;
+
+    }
+
+    h1 .accent {
+
+      color: var(--green);
+
+      font-weight: 500;
+
+    }
+
+    .hero-description {
+
+      max-width: 520px;
+
+      color: #606960;
+
+      font-size: 14px;
+
+      line-height: 1.9;
+
+      margin-top: 23px;
+
+    }
+
+    .hero-buttons {
+
+      display: flex;
+
+      flex-wrap: wrap;
+
+      gap: 12px;
+
+      margin-top: 29px;
+
+    }
+
+    .button {
+
+      display: inline-flex;
+
+      align-items: center;
+
+      justify-content: center;
+
+      gap: 13px;
+
+      padding: 13px 18px;
+
+      font-size: 11px;
+
+      font-weight: 700;
+
+      transition: .2s ease;
+
+    }
+
+    .button-primary {
+
+      background: var(--green);
+
+      color: white;
+
+    }
+
+    .button-primary:hover { background: #183729; }
+
+    .button-outline {
+
+      border: 1px solid #c6cdc3;
+
+    }
+
+    .button-outline:hover { border-color: var(--green); }
+
+    .hero-visual {
+
+      position: relative;
+
+      min-height: 425px;
+
+      background: #dce2d8;
+
+      overflow: hidden;
+
+      border: 1px solid #cbd3c8;
+
+    }
+
+    .hero-photo {
+
+      position: absolute;
+
+      inset: 0;
+
+      background:
+
+        linear-gradient(180deg, rgba(21,44,33,.05), rgba(21,44,33,.28)),
+
+        url("https://images.unsplash.com/photo-1511818966892-d7d671e672a2?auto=format&fit=crop&w=1100&q=85")
+
+        center / cover;
+
+      filter: saturate(.65);
+
+    }
+
+    .technical-grid {
+
+      position: absolute;
+
+      inset: 0;
+
+      background-image:
+
+        linear-gradient(rgba(255,255,255,.16) 1px, transparent 1px),
+
+        linear-gradient(90deg, rgba(255,255,255,.16) 1px, transparent 1px);
+
+      background-size: 35px 35px;
+
+      pointer-events: none;
+
+    }
+
+    .visual-label {
+
+      position: absolute;
+
+      top: 20px;
+
+      left: 20px;
+
+      color: white;
+
+      background: rgba(29,52,39,.78);
+
+      padding: 9px 12px;
+
+      font-family: var(--mono);
+
+      font-size: 9px;
+
+      letter-spacing: 1px;
+
+    }
+
+    .visual-bottom {
+
+      position: absolute;
+
+      bottom: 0;
+
+      left: 0;
+
+      right: 0;
+
+      display: flex;
+
+      justify-content: space-between;
+
+      align-items: end;
+
+      gap: 12px;
+
+      padding: 25px 22px 19px;
+
+      color: white;
+
+      background: linear-gradient(transparent, rgba(16,33,24,.85));
+
+    }
+
+    .visual-bottom strong {
+
+      display: block;
+
+      font-family: var(--display);
+
+      font-size: 19px;
+
+      font-weight: 600;
+
+    }
+
+    .visual-bottom span {
+
+      font-family: var(--mono);
+
+      font-size: 9px;
+
+      letter-spacing: 1px;
+
+    }
+
+    .visual-index {
+
+      border: 1px solid rgba(255,255,255,.6);
+
+      padding: 7px 9px;
+
+      font-family: var(--mono);
+
+      font-size: 10px;
+
+    }
+
+    /* INTRO STRIP */
+
+    .principles {
+
+      display: grid;
+
+      grid-template-columns: repeat(3, 1fr);
+
+      border-bottom: 1px solid var(--line);
+
+    }
+
+    .principle {
+
+      padding: 24px 22px 25px 0;
+
+      display: flex;
+
+      align-items: flex-start;
+
+      gap: 15px;
+
+    }
+
+    .principle + .principle {
+
+      border-left: 1px solid var(--line);
+
+      padding-left: 22px;
+
+    }
+
+    .principle-number {
+
+      font-family: var(--mono);
+
+      font-size: 11px;
+
+      color: var(--orange);
+
+      padding-top: 3px;
+
+    }
+
+    .principle strong {
+
+      display: block;
+
+      font-family: var(--display);
+
+      font-size: 13px;
+
+      margin-bottom: 3px;
+
+    }
+
+    .principle p {
+
+      font-size: 11px;
+
+      color: var(--muted);
+
+    }
+
+    /* SECTIONS */
+
+    section.content-section {
+
+      padding: 88px 0;
+
+      border-bottom: 1px solid var(--line);
+
+      scroll-margin-top: 30px;
+
+    }
+
+    .section-heading {
+
+      display: flex;
+
+      justify-content: space-between;
+
+      align-items: end;
+
+      gap: 30px;
+
+      margin-bottom: 35px;
+
+    }
+
+    .section-kicker {
+
+      color: var(--orange);
+
+      margin-bottom: 12px;
+
+    }
+
+    h2 {
+
+      font-family: var(--display);
+
+      font-size: clamp(29px, 3.4vw, 43px);
+
+      line-height: 1.2;
+
+      letter-spacing: -1.6px;
+
+      font-weight: 600;
+
+    }
+
+    .section-note {
+
+      max-width: 340px;
+
+      color: var(--muted);
+
+      font-size: 12px;
+
+      line-height: 1.8;
+
+    }
+
+    /* ABOUT */
+
+    .about-grid {
+
+      display: grid;
+
+      grid-template-columns: 1fr .85fr;
+
+      gap: 80px;
+
+    }
+
+    .about-copy p {
+
+      font-size: 14px;
+
+      color: #606960;
+
+      margin-bottom: 17px;
+
+      line-height: 1.95;
+
+    }
+
+    .about-facts {
+
+      border-top: 1px solid var(--line);
+
+    }
+
+    .fact {
+
+      display: grid;
+
+      grid-template-columns: 110px 1fr;
+
+      gap: 15px;
+
+      padding: 16px 0;
+
+      border-bottom: 1px solid var(--line);
+
+    }
+
+    .fact span:first-child {
+
+      font-family: var(--mono);
+
+      font-size: 9px;
+
+      color: var(--muted);
+
+      text-transform: uppercase;
+
+      letter-spacing: .8px;
+
+      padding-top: 4px;
+
+    }
+
+    .fact span:last-child {
+
+      font-size: 12px;
+
+      font-weight: 600;
+
+    }
+
+    /* FOCUS AREAS */
+
+    .focus-grid {
+
+      display: grid;
+
+      grid-template-columns: repeat(3, 1fr);
+
+      gap: 15px;
+
+    }
+
+    .focus-card {
+
+      background: var(--white);
+
+      border: 1px solid var(--line);
+
+      padding: 25px 23px 27px;
+
+      min-height: 280px;
+
+      transition: transform .25s, border-color .25s;
+
+    }
+
+    .focus-card:hover {
+
+      transform: translateY(-4px);
+
+      border-color: #93a693;
+
+    }
+
+    .focus-top {
+
+      display: flex;
+
+      justify-content: space-between;
+
+      align-items: center;
+
+      margin-bottom: 32px;
+
+    }
+
+    .focus-icon {
+
+      width: 43px;
+
+      height: 43px;
+
+      display: grid;
+
+      place-items: center;
+
+      background: var(--green-light);
+
+      color: var(--green);
+
+    }
+
+    .focus-icon svg {
+
+      width: 24px;
+
+      height: 24px;
+
+      fill: none;
+
+      stroke: currentColor;
+
+      stroke-width: 1.4;
+
+      stroke-linecap: round;
+
+      stroke-linejoin: round;
+
+    }
+
+    .focus-top .mono { color: var(--muted); }
+
+    .focus-card h3 {
+
+      font-family: var(--display);
+
+      font-size: 19px;
+
+      line-height: 1.35;
+
+      margin-bottom: 12px;
+
+      letter-spacing: -.5px;
+
+    }
+
+    .focus-card p {
+
+      font-size: 12px;
+
+      color: var(--muted);
+
+      line-height: 1.85;
+
+    }
+
+    .focus-tag {
+
+      display: inline-block;
+
+      margin-top: 20px;
+
+      padding: 5px 8px;
+
+      background: var(--paper);
+
+      color: var(--green);
+
+      font-family: var(--mono);
+
+      font-size: 8px;
+
+      letter-spacing: .6px;
+
+      text-transform: uppercase;
+
+    }
+
+    /* RESEARCH */
+
+    .research-list { border-top: 1px solid var(--line); }
+
+    .research-item {
+
+      display: grid;
+
+      grid-template-columns: 55px 1fr 35px;
+
+      gap: 20px;
+
+      align-items: start;
+
+      padding: 25px 0;
+
+      border-bottom: 1px solid var(--line);
+
+    }
+
+    .research-number {
+
+      font-family: var(--mono);
+
+      font-size: 11px;
+
+      color: var(--orange);
+
+      padding-top: 4px;
+
+    }
+
+    .research-item h3 {
+
+      font-family: var(--display);
+
+      font-size: 18px;
+
+      font-weight: 600;
+
+      margin-bottom: 7px;
+
+    }
+
+    .research-item p {
+
+      max-width: 690px;
+
+      color: var(--muted);
+
+      font-size: 12px;
+
+      line-height: 1.9;
+
+    }
+
+    .research-arrow {
+
+      color: var(--green);
+
+      font-size: 21px;
+
+    }
+
+    /* PROJECTS */
+
+    .project-grid {
+
+      display: grid;
+
+      grid-template-columns: repeat(3, 1fr);
+
+      gap: 15px;
+
+    }
+
+    .project-card {
+
+      background: var(--white);
+
+      border: 1px solid var(--line);
+
+    }
+
+    .project-art {
+
+      height: 175px;
+
+      position: relative;
+
+      overflow: hidden;
+
+      background: #dce3d9;
+
+    }
+
+    .project-art img {
+
+      width: 100%;
+
+      height: 100%;
+
+      object-fit: cover;
+
+      display: block;
+
+      filter: saturate(.55);
+
+      transition: transform .4s;
+
+    }
+
+    .project-card:hover .project-art img { transform: scale(1.04); }
+
+    .project-art .mono {
+
+      position: absolute;
+
+      top: 12px;
+
+      left: 12px;
+
+      background: rgba(244,244,239,.92);
+
+      color: var(--green);
+
+      padding: 6px 8px;
+
+    }
+
+    .project-info { padding: 20px; }
+
+    .project-info h3 {
+
+      font-family: var(--display);
+
+      font-size: 16px;
+
+      line-height: 1.5;
+
+      margin-bottom: 9px;
+
+    }
+
+    .project-info p {
+
+      font-size: 11px;
+
+      color: var(--muted);
+
+      line-height: 1.8;
+
+    }
+
+    .project-type {
+
+      display: block;
+
+      color: var(--orange);
+
+      font-family: var(--mono);
+
+      font-size: 9px;
+
+      letter-spacing: .8px;
+
+      margin-top: 17px;
+
+      text-transform: uppercase;
+
+    }
+
+    /* EDUCATION AND SKILLS */
+
+    .details-grid {
+
+      display: grid;
+
+      grid-template-columns: 1fr 1fr;
+
+      gap: 65px;
+
+    }
+
+    .education-entry {
+
+      border-left: 2px solid var(--green);
+
+      padding: 2px 0 5px 21px;
+
+      margin-top: 27px;
+
+    }
+
+    .education-entry .mono { color: var(--orange); }
+
+    .education-entry h3 {
+
+      font-family: var(--display);
+
+      font-size: 17px;
+
+      margin: 11px 0 5px;
+
+    }
+
+    .education-entry p {
+
+      color: var(--muted);
+
+      font-size: 12px;
+
+    }
+
+    .skills-wrap {
+
+      display: flex;
+
+      flex-wrap: wrap;
+
+      gap: 9px;
+
+      margin-top: 27px;
+
+    }
+
+    .skill {
+
+      border: 1px solid var(--line);
+
+      background: rgba(255,255,255,.5);
+
+      padding: 9px 12px;
+
+      font-size: 11px;
+
+      color: #455247;
+
+    }
+
+    /* CONTACT */
+
+    .contact-panel {
+
+      background: var(--green);
+
+      color: white;
+
+      padding: 48px;
+
+      display: grid;
+
+      grid-template-columns: 1fr auto;
+
+      align-items: end;
+
+      gap: 35px;
+
+    }
+
+    .contact-panel .section-kicker { color: #c9d8bf; }
+
+    .contact-panel h2 {
+
+      max-width: 580px;
+
+      font-size: clamp(30px, 4vw, 46px);
+
+    }
+
+    .contact-panel p {
+
+      max-width: 490px;
+
+      color: #d2ded4;
+
+      font-size: 12px;
+
+      margin-top: 16px;
+
+      line-height: 1.9;
+
+    }
+
+    .contact-panel .button {
+
+      background: var(--paper);
+
+      color: var(--green);
+
+      white-space: nowrap;
+
+    }
+
+    .contact-panel .button:hover { background: white; }
+
+    footer { padding: 25px 0; }
+
+    .footer-inner {
+
+      display: flex;
+
+      justify-content: space-between;
+
+      align-items: center;
+
+      gap: 20px;
+
+    }
+
+    .footer-name {
+
+      font-family: var(--display);
+
+      font-size: 11px;
+
+      font-weight: 800;
+
+    }
+
+    .footer-copy {
+
+      font-family: var(--mono);
+
+      font-size: 9px;
+
+      color: var(--muted);
+
+      text-align: right;
+
+    }
+
+    .social-links {
+
+      display: flex;
+
+      gap: 17px;
+
+      font-size: 11px;
+
+      color: var(--green);
+
+      margin-top: 8px;
+
+    }
+
+    .social-links a:hover { text-decoration: underline; }
+
+    @media (max-width: 800px) {
+
+      .nav-links { gap: 14px; }
+
+      .nav-links a:not(.nav-contact) { display: none; }
+
+      .hero { padding: 52px 0; }
+
+      .hero-grid { grid-template-columns: 1fr; gap: 35px; }
+
+      .hero-visual { min-height: 360px; }
+
+      .about-grid { grid-template-columns: 1fr; gap: 30px; }
+
+      .focus-grid, .project-grid { grid-template-columns: 1fr 1fr; }
+
+      .section-heading { align-items: start; flex-direction: column; gap: 12px; }
+
+      .details-grid { gap: 35px; }
+
+      .contact-panel { padding: 35px 28px; grid-template-columns: 1fr; }
+
+      .contact-panel .button { justify-self: start; }
+
+    }
+
+    @media (max-width: 540px) {
+
+      .container { width: 90%; }
+
+      nav { min-height: 68px; }
+
+      .brand { font-size: 12px; }
+
+      .nav-contact { padding: 8px 10px; }
+
+      h1 { letter-spacing: -2px; }
+
+      .hero-visual { min-height: 310px; }
+
+      .principles { grid-template-columns: 1fr; }
+
+      .principle, .principle + .principle {
+
+        border-left: none;
+
+        border-bottom: 1px solid var(--line);
+
+        padding: 17px 0;
+
+      }
+
+      section.content-section { padding: 63px 0; }
+
+      .focus-grid, .project-grid, .details-grid { grid-template-columns: 1fr; }
+
+      .focus-card { min-height: auto; }
+
+      .project-art { height: 200px; }
+
+      .research-item { grid-template-columns: 30px 1fr 20px; gap: 12px; }
+
+      .research-item h3 { font-size: 16px; }
+
+      .fact { grid-template-columns: 95px 1fr; }
+
+      .contact-panel { padding: 30px 22px; }
+
+      .footer-inner { align-items: flex-start; flex-direction: column; }
+
+      .footer-copy { text-align: left; }
+
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+
+      *, *::before, *::after {
+
+        scroll-behavior: auto !important;
+
+        transition: none !important;
+
+      }
+
+    }
+
+  </style>
+
 </head>
 
 <body>
 
-<header>
-    <h2>Shovon</h2>
-    <nav>
-        <a href=" ">About</a >
-        <a href="#education">Education</a >
-        <a href="#research">Research</a >
-        <a href="#projects">Projects</a >
-        <a href="#contact">Contact</a >
+  <div class="topline"></div>
+
+  <header>
+
+    <nav class="container">
+
+      <a class="brand" href="#home">
+
+        A S M FARDIN AHMED SHOVON
+
+        <span>CIVIL ENGINEERING · ACADEMIC PORTFOLIO</span>
+
+      </a>
+
+      <div class="nav-links">
+
+        <a href="#about">About</a>
+
+        <a href="#focus">Research interests</a>
+
+        <a href="#projects">Projects</a>
+
+        <a href="#education">Education</a>
+
+        <a class="nav-contact" href="#contact">Get in touch ↗</a>
+
+      </div>
+
     </nav>
-</header>
 
-<section class="hero">
-    <h1>A S M FARDIN AHMED SHOVON</h1>
-    <h3>Civil Engineering Undergraduate | Nantong University</h3>
-    <p>
-        A final-year Civil Engineering undergraduate in China with
-        a strong interest in structural engineering, sustainable
-        construction, environmental engineering, and innovative
-        construction materials.
-    </p >
-    <a class="button" href="#about">Explore My Portfolio</a >
-</section>
+  </header>
 
-<main>
+  <main>
 
-<section class="container" id="about">
-    <h2>About Me</h2>
-    <div class="card">
-        <p>
-            I am a Civil Engineering undergraduate at Nantong University,
-            China, with academic interests in structural engineering,
-            sustainable construction, and advanced cement-based materials.
-            My academic background includes structural analysis, mechanics
-            of materials, soil mechanics, foundation engineering, and
-            finite element analysis.
-        </p >
-        <br>
-        <p>
-            I am interested in exploring innovative construction
-            technologies and understanding the relationship between
-            material composition, microstructure, and mechanical
-            performance. I aspire to pursue postgraduate studies and
-            contribute to academic research in civil engineering.
-        </p >
-    </div>
-</section>
+    <section class="hero" id="home">
 
-<section class="container" id="education">
-    <h2>Education</h2>
-    <div class="card">
-        <h3>Bachelor's Degree in Civil Engineering</h3>
-        <p class="date">Nantong University, Nantong, China</p >
-        <p>Expected graduation: June 2027</p >
-        <p>Academic score to date: 85%</p >
-        <p>Scholarship: Second-Class Bachelor's Scholarship</p >
-    </div>
-</section>
+      <div class="container hero-grid">
 
-<section class="container" id="research">
-    <h2>Research Interests & Experience</h2>
+        <div>
 
-    <div class="card">
-        <h3>Sustainable Cement-Based Materials</h3>
-        <p>
-            Exploring recycled concrete powder (RCP) as a partial cement
-            replacement and investigating the effects of graphene oxide
-            and expansive agents on expansion, cracking, and mechanical
-            performance.
-        </p >
-    </div>
+          <div class="eyebrow mono">Civil Engineering · Academic Profile</div>
 
-    <div class="card">
-        <h3>3D-Printed Concrete</h3>
-        <p>
-            Studying 3D-printed concrete, with an interest in material
-            performance, interlayer bonding, structural behaviour, and
-            potential applications in construction.
-        </p >
-    </div>
+          <h1>
 
-    <div class="card">
-        <h3>Research Interests</h3>
-        <div class="skills">
-            <span class="tag">Structural Engineering</span>
-            <span class="tag">Sustainable Construction</span>
-            <span class="tag">Recycled Materials</span>
-            <span class="tag">3D-Printed Concrete</span>
-            <span class="tag">Cement-Based Materials</span>
-            <span class="tag">Finite Element Analysis</span>
+            Engineering<br>
+
+            structures.<br>
+
+            <span class="accent">Rethinking</span><br>
+
+            construction.
+
+          </h1>
+
+          <p class="hero-description">
+
+            I am a final-year Civil Engineering undergraduate at Nantong
+
+            University, China, with a strong interest in structural engineering,
+
+            sustainable construction, and innovative construction materials.
+
+            I am particularly interested in how material design and structural
+
+            behaviour can contribute to better-performing infrastructure.
+
+          </p>
+
+          <div class="hero-buttons">
+
+            <a class="button button-primary" href="#focus">
+
+              Explore my interests <span>↘</span>
+
+            </a>
+
+            <a class="button button-outline" href="#projects">
+
+              Academic projects <span>↗</span>
+
+            </a>
+
+          </div>
+
         </div>
-    </div>
-</section>
 
-<section class="container" id="projects">
-    <h2>Academic Projects</h2>
+        <div class="hero-visual">
 
-    <div class="card">
-        <h3>Pile Foundation Design for a Reinforced Concrete Building</h3>
-        <p>
-            Applied soil mechanics and structural engineering principles
-            to foundation design, including engineering calculations
-            and technical drawings.
-        </p >
-    </div>
+          <div class="hero-photo"></div>
 
-    <div class="card">
-        <h3>Reinforced Concrete Cast-in-Place Floor Slab Design</h3>
-        <p>
-            Worked on loading calculations, reinforcement arrangement,
-            and structural design considerations for a reinforced
-            concrete floor slab.
-        </p >
-    </div>
+          <div class="technical-grid"></div>
 
-    <div class="card">
-        <h3>Single-Storey Industrial Factory Building Design</h3>
-        <p>
-            Completed a course design project involving the structural
-            design of a single-storey industrial factory building.
-        </p >
-    </div>
-</section>
+          <div class="visual-label">FIG. 01 / BUILT ENVIRONMENT</div>
 
-<section class="container" id="skills">
-    <h2>Academic Skills</h2>
-    <div class="card">
-        <div class="skills">
-            <span class="tag">Structural Analysis</span>
-            <span class="tag">Mechanics of Materials</span>
-            <span class="tag">Soil Mechanics</span>
-            <span class="tag">Foundation Engineering</span>
-            <span class="tag">Finite Element Analysis</span>
-            <span class="tag">ANSYS</span>
-            <span class="tag">AutoCAD</span>
-            <span class="tag">Engineering Design</span>
+          <div class="visual-bottom">
+
+            <div>
+
+              <strong>Structure · Material · Performance</strong>
+
+              <span>AN ENGINEERING PERSPECTIVE</span>
+
+            </div>
+
+            <div class="visual-index">01—03</div>
+
+          </div>
+
         </div>
-        <p style="margin-top: 15px; font-size: 14px;">
-            List software skills only at the level you can confidently
-            demonstrate.
-        </p >
-    </div>
-</section>
 
-<section class="container" id="contact">
-    <h2>Connect With Me</h2>
-    <div class="card">
-        <p>
-            I welcome academic connections and opportunities for
-            postgraduate study and research collaboration in civil
-            engineering.
-        </p >
-        <br>
-        <div class="links">
-            <!-- Replace the example links below with your actual profiles. -->
-            <a href="https://orcid.org/0009-0007-4286-6776"
-               target="_blank" rel="noopener noreferrer">ORCID</a >
+      </div>
 
-            <a href="https://github.com/YOUR-USERNAME"
-               target="_blank" rel="noopener noreferrer">GitHub</a >
+    </section>
 
-            <a href="https://www.linkedin.com/"
-               target="_blank" rel="noopener noreferrer">LinkedIn</a >
+    <div class="container">
+
+      <div class="principles">
+
+        <div class="principle">
+
+          <span class="principle-number">01</span>
+
+          <div>
+
+            <strong>Structural Engineering</strong>
+
+            <p>Structural behaviour, analysis and design.</p>
+
+          </div>
+
         </div>
+
+        <div class="principle">
+
+          <span class="principle-number">02</span>
+
+          <div>
+
+            <strong>Sustainable Construction</strong>
+
+            <p>Resource efficiency and lower-impact materials.</p>
+
+          </div>
+
+        </div>
+
+        <div class="principle">
+
+          <span class="principle-number">03</span>
+
+          <div>
+
+            <strong>Material Innovation</strong>
+
+            <p>New material systems and concrete technologies.</p>
+
+          </div>
+
+        </div>
+
+      </div>
+
     </div>
-</section>
 
-</main>
+    <section class="content-section" id="about">
 
-<footer>
-    <p>© 2026 Shovon | Civil Engineering Academic Portfolio</p >
-    <p>Nantong University, China</p >
-</footer>
+      <div class="container">
+
+        <div class="section-heading">
+
+          <div>
+
+            <div class="section-kicker mono">01 / Profile</div>
+
+            <h2>About me</h2>
+
+          </div>
+
+          <p class="section-note">
+
+            An academic foundation in civil engineering, with growing
+
+            interests in research, material behaviour, and structural systems.
+
+          </p>
+
+        </div>
+
+        <div class="about-grid">
+
+          <div class="about-copy">
+
+            <p>
+
+              My undergraduate studies have provided a foundation in structural
+
+              mechanics, reinforced concrete design, soil mechanics, foundation
+
+              engineering, and construction technology.
+
+            </p>
+
+            <p>
+
+              My academic interests bring together structural performance and
+
+              the development of construction materials. I am interested in
+
+              recycled concrete materials, cement-based composites, and
+
+              emerging construction methods such as 3D-printed concrete.
+
+            </p>
+
+            <p>
+
+              I aim to strengthen my research skills and pursue advanced study
+
+              in structural engineering and sustainable construction materials.
+
+            </p>
+
+          </div>
+
+          <div class="about-facts">
+
+            <div class="fact">
+
+              <span>University</span>
+
+              <span>Nantong University</span>
+
+            </div>
+
+            <div class="fact">
+
+              <span>Discipline</span>
+
+              <span>Civil Engineering</span>
+
+            </div>
+
+            <div class="fact">
+
+              <span>Academic stage</span>
+
+              <span>Final-year undergraduate</span>
+
+            </div>
+
+            <div class="fact">
+
+              <span>Expected graduation</span>
+
+              <span>June 2027</span>
+
+            </div>
+
+            <div class="fact">
+
+              <span>Location</span>
+
+              <span>Nantong, China</span>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <section class="content-section" id="focus">
+
+      <div class="container">
+
+        <div class="section-heading">
+
+          <div>
+
+            <div class="section-kicker mono">02 / Research direction</div>
+
+            <h2>Areas of interest</h2>
+
+          </div>
+
+          <p class="section-note">
+
+            Three connected areas shaping my academic direction and future
+
+            research goals.
+
+          </p>
+
+        </div>
+
+        <div class="focus-grid">
+
+          <article class="focus-card">
+
+            <div class="focus-top">
+
+              <div class="focus-icon">
+
+                <svg viewBox="0 0 24 24">
+
+                  <path d="M4 21V5l8-3 8 3v16"/>
+
+                  <path d="M4 8h16M4 13h16M4 18h16M8 5v16M16 5v16"/>
+
+                </svg>
+
+              </div>
+
+              <span class="mono">AREA / 01</span>
+
+            </div>
+
+            <h3>Structural Engineering</h3>
+
+            <p>
+
+              Structural analysis, reinforced concrete systems, load-bearing
+
+              behaviour, cracking, and the relationship between material
+
+              properties and structural performance.
+
+            </p>
+
+            <span class="focus-tag">Analysis · Design · Performance</span>
+
+          </article>
+
+          <article class="focus-card">
+
+            <div class="focus-top">
+
+              <div class="focus-icon">
+
+                <svg viewBox="0 0 24 24">
+
+                  <path d="M12 21s8-4 8-11V5l-8-3-8 3v5c0 7 8 11 8 11Z"/>
+
+                  <path d="M8 12l2.5 2.5L16 9"/>
+
+                </svg>
+
+              </div>
+
+              <span class="mono">AREA / 02</span>
+
+            </div>
+
+            <h3>Sustainable Construction</h3>
+
+            <p>
+
+              Recycled construction materials, partial cement replacement,
+
+              resource-efficient concrete, and approaches to reducing the
+
+              environmental impact of construction.
+
+            </p>
+
+            <span class="focus-tag">Recycling · Efficiency · Durability</span>
+
+          </article>
+
+          <article class="focus-card">
+
+            <div class="focus-top">
+
+              <div class="focus-icon">
+
+                <svg viewBox="0 0 24 24">
+
+                  <path d="M12 3 3 8l9 5 9-5-9-5Z"/>
+
+                  <path d="m3 12 9 5 9-5M3 16l9 5 9-5"/>
+
+                </svg>
+
+              </div>
+
+              <span class="mono">AREA / 03</span>
+
+            </div>
+
+            <h3>Innovative Construction Materials</h3>
+
+            <p>
+
+              Cement-based composites, graphene oxide, expansive agents,
+
+              recycled concrete powder, and 3D-printed concrete technologies.
+
+            </p>
+
+            <span class="focus-tag">Concrete · Microstructure · Innovation</span>
+
+          </article>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <section class="content-section" id="research">
+
+      <div class="container">
+
+        <div class="section-heading">
+
+          <div>
+
+            <div class="section-kicker mono">03 / Academic interests</div>
+
+            <h2>Research themes</h2>
+
+          </div>
+
+          <p class="section-note">
+
+            Topics I am exploring through academic study and ongoing research
+
+            activities. These are research interests, not claims of completed
+
+            publications.
+
+          </p>
+
+        </div>
+
+        <div class="research-list">
+
+          <article class="research-item">
+
+            <div class="research-number">01</div>
+
+            <div>
+
+              <h3>Recycled Concrete Powder in Cement-Based Materials</h3>
+
+              <p>
+
+                Exploring the use of recycled concrete powder as a partial
+
+                cement replacement and its relationship with material
+
+                performance and resource efficiency.
+
+              </p>
+
+            </div>
+
+            <span class="research-arrow">↗</span>
+
+          </article>
+
+          <article class="research-item">
+
+            <div class="research-number">02</div>
+
+            <div>
+
+              <h3>Graphene Oxide and Expansive Agents</h3>
+
+              <p>
+
+                Investigating how material composition and expansive behaviour
+
+                may influence dimensional stability, cracking, and mechanical
+
+                performance in cementitious systems.
+
+              </p>
+
+            </div>
+
+            <span class="research-arrow">↗</span>
+
+          </article>
+
+          <article class="research-item">
+
+            <div class="research-number">03</div>
+
+            <div>
+
+              <h3>3D-Printed Concrete</h3>
+
+              <p>
+
+                Exploring printable concrete mixtures, interlayer bonding,
+
+                material properties, and the structural potential of
+
+                extrusion-based construction.
+
+              </p>
+
+            </div>
+
+            <span class="research-arrow">↗</span>
+
+          </article>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <section class="content-section" id="projects">
+
+      <div class="container">
+
+        <div class="section-heading">
+
+          <div>
+
+            <div class="section-kicker mono">04 / Selected coursework</div>
+
+            <h2>Academic projects</h2>
+
+          </div>
+
+          <p class="section-note">
+
+            Design-based coursework applying civil engineering principles to
+
+            foundations, reinforced concrete, and building structures.
+
+          </p>
+
+        </div>
+
+        <div class="project-grid">
+
+          <article class="project-card">
+
+            <div class="project-art">
+
+              <img
+
+                src="https://images.unsplash.com/photo-1590725140246-20acdee442be?auto=format&fit=crop&w=800&q=80"
+
+                alt="Reinforced concrete building under construction"
+
+                loading="lazy">
+
+              <span class="mono">PROJECT / 01</span>
+
+            </div>
+
+            <div class="project-info">
+
+              <h3>Pile Foundation Design</h3>
+
+              <p>
+
+                Design coursework for a reinforced concrete building,
+
+                applying soil mechanics and structural engineering principles
+
+                to foundation design and stability.
+
+              </p>
+
+              <span class="project-type">Foundation Engineering</span>
+
+            </div>
+
+          </article>
+
+          <article class="project-card">
+
+            <div class="project-art">
+
+              <img
+
+                src="https://images.unsplash.com/photo-1511818966892-d7d671e672a2?auto=format&fit=crop&w=800&q=80"
+
+                alt="Modern building with exposed structural geometry"
+
+                loading="lazy">
+
+              <span class="mono">PROJECT / 02</span>
+
+            </div>
+
+            <div class="project-info">
+
+              <h3>Reinforced Concrete Floor Slab</h3>
+
+              <p>
+
+                Cast-in-place slab design coursework covering loading,
+
+                reinforcement arrangement, and serviceability considerations.
+
+              </p>
+
+              <span class="project-type">Concrete Structures</span>
+
+            </div>
+
+          </article>
+
+          <article class="project-card">
+
+            <div class="project-art">
+
+              <img
+
+                src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=800&q=80"
+
+                alt="Structural construction site"
+
+                loading="lazy">
+
+              <span class="mono">PROJECT / 03</span>
+
+            </div>
+
+            <div class="project-info">
+
+              <h3>Industrial Factory Building</h3>
+
+              <p>
+
+                Single-storey industrial factory building design coursework
+
+                focused on the structural arrangement of a building frame.
+
+              </p>
+
+              <span class="project-type">Building Structures</span>
+
+            </div>
+
+          </article>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <section class="content-section" id="education">
+
+      <div class="container">
+
+        <div class="section-heading">
+
+          <div>
+
+            <div class="section-kicker mono">05 / Qualifications</div>
+
+            <h2>Education & skills</h2>
+
+          </div>
+
+        </div>
+
+        <div class="details-grid">
+
+          <div>
+
+            <div class="mono">Education</div>
+
+            <div class="education-entry">
+
+              <span class="mono">2023 — 2027</span>
+
+              <h3>Bachelor's Degree in Civil Engineering</h3>
+
+              <p>Nantong University · Nantong, China</p>
+
+              <p style="margin-top: 10px;">
+
+                Relevant study: Structural Mechanics, Engineering Structures,
+
+                Soil Mechanics and Foundation Engineering, Materials Mechanics,
+
+                Finite Element Analysis, and Civil Engineering Materials.
+
+              </p>
+
+            </div>
+
+          </div>
+
+          <div>
+
+            <div class="mono">Technical foundation</div>
+
+            <div class="skills-wrap">
+
+              <span class="skill">Structural Analysis</span>
+
+              <span class="skill">Concrete Design</span>
+
+              <span class="skill">Soil Mechanics</span>
+
+              <span class="skill">Foundation Design</span>
+
+              <span class="skill">Finite Element Analysis</span>
+
+              <span class="skill">ANSYS</span>
+
+              <span class="skill">AutoCAD</span>
+
+              <span class="skill">Construction Materials</span>
+
+              <span class="skill">Engineering Drawing</span>
+
+              <span class="skill">Numerical Analysis</span>
+
+            </div>
+
+            <p style="font-size: 11px; color: var(--muted); margin-top: 16px;">
+
+              List only software and technical skills you can confidently
+
+              discuss or demonstrate. Adjust this section as your experience
+
+              develops.
+
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <section class="content-section" id="contact">
+
+      <div class="container">
+
+        <div class="contact-panel">
+
+          <div>
+
+            <div class="section-kicker mono">06 / Contact</div>
+
+            <h2>Interested in research and academic collaboration.</h2>
+
+            <p>
+
+              I welcome opportunities to connect with researchers and
+
+              academics working in structural engineering, sustainable
+
+              construction, and innovative construction materials.
+
+            </p>
+
+          </div>
+
+          <a class="button" href="mailto:YOUR-EMAIL@example.com">
+
+            Contact me <span>↗</span>
+
+          </a>
+
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+  <footer>
+
+    <div class="container footer-inner">
+
+      <div>
+
+        <div class="footer-name">A S M FARDIN AHMED SHOVON</div>
+
+        <div class="social-links">
+
+          <a href="https://orcid.org/0009-0007-4286-6776" target="_blank" rel="noopener noreferrer">ORCID ↗</a>
+
+          <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>
+
+          <a href="https://github.com/YOUR-USERNAME" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+
+        </div>
+
+      </div>
+
+      <div class="footer-copy">
+
+        CIVIL ENGINEERING / ACADEMIC PORTFOLIO<br>
+
+        © <span id="year"></span> · BUILT WITH PURPOSE
+
+      </div>
+
+    </div>
+
+  </footer>
+
+  <script>
+
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+  </script>
 
 </body>
+
 </html>
