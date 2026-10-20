@@ -9,158 +9,173 @@
     <meta name="description" content="Academic portfolio of Shovon, a Civil Engineering undergraduate at Nantong University, China.">
 
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
 
-        html {
-            scroll-behavior: smooth;
-        }
+/* Structural Engineering Portfolio Theme */
 
-        body {
-            font-family: Arial, Helvetica, sans-serif;
-            background: #f5f7fa;
-            color: #263445;
-            line-height: 1.7;
-        }
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #233447;
+    background-color: #f4f6f8;
+    line-height: 1.7;
+}
 
-        header {
-            background: #10243a;
-            color: white;
-            padding: 18px 8%;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            flex-wrap: wrap;
-            gap: 12px;
-        }
+/* Engineering blueprint hero background */
+.hero {
+    position: relative;
+    overflow: hidden;
+    isolation: isolate;
+    padding: 100px 8%;
+    text-align: left;
+    color: #ffffff;
+    background-color: #10243a;
 
-        header h2 {
-            font-size: 22px;
-        }
+    background-image:
+        linear-gradient(
+            rgba(16, 36, 58, 0.93),
+            rgba(16, 36, 58, 0.97)
+        ),
+        repeating-linear-gradient(
+            0deg,
+            transparent,
+            transparent 39px,
+            rgba(142, 193, 211, 0.20) 40px
+        ),
+        repeating-linear-gradient(
+            90deg,
+            transparent,
+            transparent 39px,
+            rgba(142, 193, 211, 0.20) 40px
+        );
+}
 
-        nav a {
-            color: white;
-            text-decoration: none;
-            margin-left: 20px;
-            font-size: 14px;
-        }
+/* Subtle structural-frame illustration */
+.hero::before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    right: -2%;
+    width: 42%;
+    height: 100%;
+    opacity: 0.5;
+    background:
+        linear-gradient(
+            90deg,
+            transparent 47%,
+            #77b7c5 48%,
+            #77b7c5 49%,
+            transparent 50%
+        ),
+        linear-gradient(
+            0deg,
+            transparent 24%,
+            #77b7c5 25%,
+            #77b7c5 26%,
+            transparent 27%,
+            transparent 49%,
+            #77b7c5 50%,
+            #77b7c5 51%,
+            transparent 52%,
+            transparent 74%,
+            #77b7c5 75%,
+            #77b7c5 76%,
+            transparent 77%
+        );
+    border-left: 2px solid rgba(119, 183, 197, 0.5);
+    transform: skewY(-8deg);
+    pointer-events: none;
+}
 
-        nav a:hover {
-            color: #65d6c4;
-        }
+.hero h1 {
+    position: relative;
+    max-width: 800px;
+    font-size: clamp(32px, 5vw, 54px);
+    line-height: 1.2;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+}
 
-        .hero {
-            background: linear-gradient(135deg, #10243a, #245779);
-            color: white;
-            padding: 90px 8%;
-            text-align: center;
-        }
+.hero h3 {
+    color: #65d6c4;
+    font-size: 18px;
+    font-weight: 500;
+}
 
-        .hero h1 {
-            font-size: clamp(32px, 5vw, 48px);
-            margin-bottom: 12px;
-        }
+.hero p {
+    max-width: 650px;
+    color: #d8e2ec;
+    font-size: 17px;
+}
 
-        .hero h3 {
-            color: #65d6c4;
-            font-weight: 500;
-            margin-bottom: 18px;
-        }
+/* Navigation */
+header {
+    background: #ffffff;
+    color: #10243a;
+    padding: 18px 8%;
+    border-bottom: 1px solid #dce3e9;
+}
 
-        .hero p {
-            max-width: 700px;
-            margin: auto;
-            color: #e2eaf1;
-        }
+header h2 {
+    color: #10243a;
+}
 
-        .button {
-            display: inline-block;
-            margin-top: 25px;
-            padding: 11px 24px;
-            background: #65d6c4;
-            color: #10243a;
-            border-radius: 6px;
-            text-decoration: none;
-            font-weight: bold;
-        }
+nav a {
+    color: #263e54;
+    text-decoration: none;
+    margin-left: 20px;
+}
 
-        .container {
-            max-width: 1050px;
-            margin: auto;
-            padding: 55px 22px;
-        }
+nav a:hover {
+    color: #168c8c;
+}
 
-        section h2 {
-            color: #10243a;
-            font-size: 28px;
-            margin-bottom: 22px;
-        }
+/* Clean academic content cards */
+.container {
+    max-width: 1050px;
+    margin: auto;
+    padding: 55px 22px;
+}
 
-        .card {
-            background: white;
-            padding: 25px;
-            border-radius: 10px;
-            margin-bottom: 20px;
-            box-shadow: 0 3px 14px rgba(20, 40, 60, 0.06);
-        }
+section h2 {
+    color: #10243a;
+    font-size: 28px;
+    letter-spacing: 0.3px;
+}
 
-        .card h3 {
-            color: #245779;
-            margin-bottom: 8px;
-        }
+.card {
+    background: #ffffff;
+    padding: 26px;
+    margin-bottom: 22px;
+    border: 1px solid #e0e6eb;
+    border-left: 4px solid #3c9b9b;
+    border-radius: 4px;
+    box-shadow: 0 5px 18px rgba(16, 36, 58, 0.04);
+}
 
-        .date {
-            color: #657587;
-            font-size: 14px;
-            margin-bottom: 10px;
-        }
+.card h3 {
+    color: #245779;
+}
 
-        .skills {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
-        }
+/* Engineering skill labels */
+.tag {
+    display: inline-block;
+    background: #e7f2f3;
+    color: #205b63;
+    padding: 7px 12px;
+    border: 1px solid #d0e5e7;
+    border-radius: 3px;
+    font-size: 13px;
+}
 
-        .tag {
-            background: #e1f3f0;
-            color: #174f50;
-            padding: 7px 13px;
-            border-radius: 5px;
-            font-size: 14px;
-        }
+/* Footer */
+footer {
+    background: #10243a;
+    color: #d8e2ec;
+    text-align: center;
+    padding: 25px;
+}
 
-        .links a {
-            color: #176a86;
-            text-decoration: none;
-            margin-right: 18px;
-            font-weight: bold;
-        }
-
-        footer {
-            background: #10243a;
-            color: #dce5ed;
-            text-align: center;
-            padding: 25px;
-            font-size: 14px;
-        }
-
-        @media (max-width: 600px) {
-            header {
-                justify-content: center;
-                text-align: center;
-            }
-
-            nav a {
-                margin: 0 7px;
-            }
-
-            .hero {
-                padding: 65px 6%;
-            }
-        }
     </style>
 </head>
 
