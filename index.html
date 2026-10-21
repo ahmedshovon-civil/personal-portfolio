@@ -1,207 +1,1246 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>SHOVON | Civil Engineering Portfolio</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <style>
-    * {
-      box-sizing: border-box;
-      scroll-behavior: smooth;
-    }
+    <title>SHOVON | Civil Engineering Portfolio</title>
 
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: #f2f5f7;
-      color: #243342;
-      line-height: 1.7;
-    }
+    <meta name="description" content="Personal portfolio of Shovon A S M Fardin Ahmed, a Civil Engineering undergraduate researcher at Nantong University, China.">
 
-    header {
-      background: #102f43;
-      color: white;
-      text-align: center;
-      padding: 55px 20px 40px;
-    }
+    <style>
+        /* ===== GLOBAL STYLES ===== */
+        :root {
+            --background: #0b1120;
+            --surface: #111b2e;
+            --surface-light: #17243a;
+            --primary: #45d6c5;
+            --text: #f1f5f9;
+            --muted: #a8b5c8;
+            --border: rgba(255,255,255,0.10);
+        }
 
-    .profile-photo {
-      width: 160px;
-      height: 160px;
-      border-radius: 50%;
-      border: 4px solid white;
-      object-fit: cover;
-    }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
 
-    header h1 {
-      margin: 20px 0 5px;
-      font-size: 30px;
-    }
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: var(--background);
+            color: var(--text);
+            line-height: 1.7;
+        }
 
-    header p {
-      color: #cbdce7;
-    }
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
 
-    nav {
-      margin-top: 25px;
-    }
+        img {
+            max-width: 100%;
+            display: block;
+        }
 
-    nav a {
-      color: white;
-      text-decoration: none;
-      margin: 0 10px;
-      display: inline-block;
-    }
+        .container {
+            width: min(1120px, 90%);
+            margin: auto;
+        }
 
-    nav a:hover {
-      color: #69d0d8;
-    }
+        .section {
+            padding: 90px 0;
+            scroll-margin-top: 80px;
+        }
 
-    main {
-      max-width: 900px;
-      margin: 35px auto;
-      padding: 0 20px;
-    }
+        .section-title {
+            font-size: clamp(28px, 4vw, 40px);
+            margin-bottom: 12px;
+        }
 
-    section {
-      background: white;
-      padding: 28px;
-      margin-bottom: 25px;
-      border-radius: 12px;
-      box-shadow: 0 4px 15px #152b3a12;
-    }
+        .section-subtitle {
+            color: var(--muted);
+            margin-bottom: 38px;
+            max-width: 680px;
+        }
 
-    h2 {
-      color: #176b87;
-      margin-top: 0;
-    }
+        .accent {
+            color: var(--primary);
+        }
 
-    .project {
-      border-left: 4px solid #176b87;
-      padding-left: 15px;
-      margin-top: 20px;
-    }
+        .tag {
+            display: inline-block;
+            padding: 6px 12px;
+            border: 1px solid var(--border);
+            border-radius: 30px;
+            color: var(--primary);
+            font-size: 13px;
+            margin: 4px 4px 4px 0;
+        }
 
-    .contact-link {
-      color: #176b87;
-      text-decoration: none;
-    }
+        .btn {
+            display: inline-block;
+            padding: 12px 22px;
+            border-radius: 8px;
+            font-weight: bold;
+            transition: 0.25s;
+            cursor: pointer;
+        }
 
-    footer {
-      background: #102f43;
-      color: white;
-      text-align: center;
-      padding: 22px;
-    }
+        .btn-primary {
+            background: var(--primary);
+            color: #07151b;
+        }
 
-    @media (max-width: 600px) {
-      header h1 {
-        font-size: 23px;
-      }
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            opacity: 0.9;
+        }
 
-      nav a {
-        margin: 6px;
-      }
+        .btn-outline {
+            border: 1px solid var(--border);
+            color: var(--text);
+        }
 
-      section {
-        padding: 20px;
-      }
-    }
-  </style>
+        .btn-outline:hover {
+            border-color: var(--primary);
+            color: var(--primary);
+        }
+
+        /* ===== NAVIGATION ===== */
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            background: rgba(11,17,32,0.94);
+            backdrop-filter: blur(14px);
+            border-bottom: 1px solid var(--border);
+        }
+
+        nav {
+            min-height: 72px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .logo {
+            font-size: 21px;
+            font-weight: 800;
+            letter-spacing: 2px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 24px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            font-size: 14px;
+            color: var(--muted);
+            transition: 0.2s;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary);
+        }
+
+        .menu-toggle {
+            display: none;
+            border: 1px solid var(--border);
+            color: var(--text);
+            background: var(--surface);
+            border-radius: 6px;
+            padding: 8px 12px;
+            font-size: 18px;
+            cursor: pointer;
+        }
+
+        /* ===== HERO ===== */
+        .hero {
+            min-height: 88vh;
+            display: flex;
+            align-items: center;
+            padding: 70px 0;
+            background:
+                radial-gradient(ellipse at 80% 20%,
+                rgba(69,214,197,0.10), transparent 40%);
+        }
+
+        .hero-grid {
+            display: grid;
+            grid-template-columns: 1.3fr 0.7fr;
+            align-items: center;
+            gap: 60px;
+        }
+
+        .eyebrow {
+            color: var(--primary);
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            font-size: 12px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        .hero h1 {
+            font-size: clamp(36px, 5.5vw, 66px);
+            line-height: 1.12;
+            margin-bottom: 22px;
+        }
+
+        .hero-description {
+            color: var(--muted);
+            font-size: 17px;
+            max-width: 620px;
+            margin-bottom: 28px;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+            margin-bottom: 28px;
+        }
+
+        .hero-image-wrap {
+            max-width: 350px;
+            margin: auto;
+            position: relative;
+        }
+
+        .hero-image {
+            width: 100%;
+            aspect-ratio: 4 / 5;
+            object-fit: cover;
+            object-position: center;
+            border-radius: 22px;
+            border: 1px solid rgba(69,214,197,0.45);
+            background: var(--surface);
+        }
+
+        .image-caption {
+            margin-top: 14px;
+            text-align: center;
+            color: var(--muted);
+            font-size: 13px;
+        }
+
+        /* ===== CARDS AND GRIDS ===== */
+        .grid-2 {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 22px;
+        }
+
+        .grid-3 {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 22px;
+        }
+
+        .card {
+            padding: 27px;
+            border: 1px solid var(--border);
+            border-radius: 15px;
+            background: var(--surface);
+            transition: 0.25s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            border-color: rgba(69,214,197,0.5);
+        }
+
+        .card h3 {
+            font-size: 19px;
+            margin-bottom: 12px;
+        }
+
+        .card p {
+            color: var(--muted);
+            font-size: 15px;
+        }
+
+        .card-icon {
+            font-size: 28px;
+            margin-bottom: 15px;
+        }
+
+        /* ===== ABOUT ===== */
+        .about {
+            background: #0e1728;
+        }
+
+        .about-copy p {
+            color: var(--muted);
+            margin-bottom: 18px;
+        }
+
+        .info-list {
+            list-style: none;
+        }
+
+        .info-list li {
+            padding: 12px 0;
+            border-bottom: 1px solid var(--border);
+            color: var(--muted);
+        }
+
+        .info-list strong {
+            color: var(--text);
+        }
+
+        /* ===== EDUCATION ===== */
+        .timeline {
+            border-left: 2px solid var(--primary);
+            padding-left: 25px;
+            margin-left: 8px;
+        }
+
+        .timeline-item {
+            position: relative;
+            padding: 0 0 32px 10px;
+        }
+
+        .timeline-item::before {
+            content: "";
+            position: absolute;
+            left: -33px;
+            top: 8px;
+            width: 13px;
+            height: 13px;
+            border-radius: 50%;
+            background: var(--primary);
+        }
+
+        .timeline-date {
+            color: var(--primary);
+            font-size: 13px;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .timeline-item h3 {
+            margin-bottom: 6px;
+        }
+
+        .timeline-item p {
+            color: var(--muted);
+        }
+
+        /* ===== RESEARCH ===== */
+        .research-card {
+            display: flex;
+            flex-direction: column;
+            min-height: 245px;
+        }
+
+        .research-card .tags {
+            margin-top: auto;
+            padding-top: 20px;
+        }
+
+        /* ===== PROJECTS ===== */
+        .project-card {
+            overflow: hidden;
+        }
+
+        .project-visual {
+            min-height: 150px;
+            display: grid;
+            place-items: center;
+            background:
+                linear-gradient(135deg, #152d40, #132037);
+            border-radius: 10px;
+            margin-bottom: 20px;
+            font-size: 44px;
+        }
+
+        /* ===== SKILLS ===== */
+        .skill-group {
+            margin-bottom: 24px;
+        }
+
+        .skill-group h3 {
+            margin-bottom: 12px;
+        }
+
+        /* ===== CONTACT ===== */
+        .contact {
+            background: #0e1728;
+        }
+
+        .contact-link {
+            color: var(--primary);
+            overflow-wrap: anywhere;
+        }
+
+        footer {
+            padding: 25px 0;
+            text-align: center;
+            border-top: 1px solid var(--border);
+            color: var(--muted);
+            font-size: 13px;
+        }
+
+        /* ===== RESPONSIVE DESIGN ===== */
+        @media (max-width: 850px) {
+            .hero-grid {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+
+            .hero {
+                min-height: auto;
+            }
+
+            .hero-image-wrap {
+                max-width: 290px;
+            }
+
+            .grid-3 {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+
+            .nav-links {
+                gap: 14px;
+            }
+        }
+
+        @media (max-width: 650px) {
+            .menu-toggle {
+                display: block;
+            }
+
+            nav {
+                flex-wrap: wrap;
+                padding: 15px 0;
+            }
+
+            .nav-links {
+                display: none;
+                width: 100%;
+                flex-direction: column;
+                gap: 0;
+                padding-bottom: 10px;
+            }
+
+            .nav-links.open {
+                display: flex;
+            }
+
+            .nav-links a {
+                display: block;
+                padding: 10px 0;
+            }
+
+            .grid-2,
+            .grid-3 {
+                grid-template-columns: 1fr;
+            }
+
+            .section {
+                padding: 65px 0;
+            }
+
+            .hero h1 {
+                font-size: 39px;
+            }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            *,
+            *::before,
+            *::after {
+                scroll-behavior: auto !important;
+                transition: none !important;
+            }
+        }
+    </style>
 </head>
 
 <body>
 
-  <header>
-    <img class="profile-photo" src="shovon.jpg"
-         alt="Shovon's profile photo">
+    <!-- ===== HEADER ===== -->
+    <header>
+        <nav class="container">
 
-    <h1>A S M FARDIN AHMED SHOVON</h1>
+            <a href="#home" class="logo">
+                SHOVON<span class="accent">.</span>
+            </a>
 
-    <p>Aspiring Civil Engineer</p>
+            <button
+                class="menu-toggle"
+                id="menuToggle"
+                aria-label="Open navigation menu"
+                aria-expanded="false"
+                aria-controls="navLinks">
+                ☰
+            </button>
 
-    <nav>
-      <a href="#about">About</a>
-      <a href="#education">Education</a>
-      <a href="#skills">Skills</a>
-      <a href="#projects">Projects</a>
-      <a href="#contact">Contact</a>
-    </nav>
-  </header>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#research">Research</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
 
-  <main>
+        </nav>
+    </header>
 
-    <section id="about">
-      <h2>About Me</h2>
-      <p>
-        Hello! I'm Shovon, a final-year Civil Engineering undergraduate at Nantong University, China, with a strong interest in structural engineering, sustainable construction and innovative building materials.
-      </p>
-    </section>
 
-    <section id="education">
-      <h2>Education</h2>
-      <p><strong>Degree:</strong> Bachelor of Engineering (BSc.Eng.) in Civil Engineering</p>
-      <p><strong>Institution:</strong> NANTONG UNIVERSITY</p>
-      <p><strong>Graduation:</strong> Expected June 2027</p>
-    </section>
+    <!-- ===== HOME / HERO ===== -->
+    <main>
+        <section class="hero" id="home">
+            <div class="container hero-grid">
 
-    <section id="interests">
-      <h2>Research Interests</h2>
-      <ul>
-        <li>Recycled Materials</li>
-        <li>Sustainable Infrustructures</li>
-        <li>Eco-Friendly Construction Technologies</li>
-      </ul>
-    </section>
+                <div>
+                    <p class="eyebrow">
+                        Civil Engineering · Undergraduate Research
+                    </p>
 
-    <section id="projects">
-      <h2>Engineering Projects(Nantong University Associated)</h2>
+                    <h1>
+                        Building a more
+                        <span class="accent">sustainable</span>
+                        future.
+                    </h1>
 
-      <div class="project">
-        <h3>Project 1: Reinforced Concrete Cast-in-Place Floor Slab Design: Structural Efficiency and Sustainability.</h3>
-        <p>
-          Designed a reinforced concrete cast-in-place floor slab by applying principles of structural analysis and reinforced concrete design.
-Considered loading conditions, structural requirements, reinforcement arrangement and serviceability to develop a safe and practical slab design.
-        </p>
-      </div>
+                    <p class="hero-description">
+                        I am Shovon A S M Fardin Ahmed, a final-year
+                        Civil Engineering student at Nantong University,
+                        China, with interests in sustainable construction,
+                        recycled concrete materials, structural engineering,
+                        and environmentally responsible building technologies.
+                    </p>
 
-      <div class="project">
-        <h3>Project 2: Single-Story Industrial Factory Building Rack Structure Design.</h3>
-        <p>
-         Developed a rack structure for a single-story industrial factory building using structural engineering principles. Performed basic structural calculations for loads, member forces, and stability and prepared engineering drawings.
-        </p>
-      </div>
-      <div class="project">
-  <h3>Project 3: Pile Foundation Design for a Reinforced Concrete Building.</h3>
-  <p>Designed a pile foundation system using manual calculations based on soil mechanics and structural engineering principles. Performed calculations for pile capacity, allowable load, settlement and foundation stability and prepared detailed engineering drawings.
-Developed practical skills in foundation design, engineering calculations and technical drafting, with a focus on safe and sustainable foundation systems.</p>
-</div>
+                    <div class="hero-buttons">
+                        <a href="#research" class="btn btn-primary">
+                            Explore My Research
+                        </a>
 
-    </section>
+                        <a href="#contact" class="btn btn-outline">
+                            Contact Me
+                        </a>
+                    </div>
 
-    <section id="contact">
-      <h2>Contact Me</h2>
-      <p>Email:
-        <a class="contact-link" href="mailto:shovon.fardinahmed@gmail.com">
-          shovon.fardinahmed@gmail.com
-        </a>
-      </p>
-      <p>Location: Nantong, China</p>
-      <p>
-        GitHub:
-        <a class="contact-link"
-           href="https://github.com/YOUR-USERNAME">
-          Visit my GitHub profile
-        </a>
-      </p>
-    </section>
+                    <div>
+                        <span class="tag">Civil Engineering</span>
+                        <span class="tag">Sustainable Construction</span>
+                        <span class="tag">Materials Research</span>
+                    </div>
+                </div>
 
-  </main>
+                <div class="hero-image-wrap">
 
-  <footer>
-    <p>© 2026 A S M FARDIN AHMED SHOVON | Civil Engineering Undergraduate</p>
-  </footer>
+                    <!-- Replace profile.jpg with your actual photo filename -->
+                    <img
+                        src="profile.jpg"
+                        alt="Portrait of Shovon"
+                        class="hero-image"
+                        onerror="this.style.display='none'; document.getElementById('photoFallback').style.display='grid';">
+
+                    <div
+                        id="photoFallback"
+                        style="display:none; aspect-ratio:4/5; place-items:center;
+                        background:#17243a; border:1px solid #45d6c5;
+                        border-radius:22px; color:#45d6c5; font-size:72px;">
+                        SA
+                    </div>
+
+                    <p class="image-caption">
+                        Civil Engineering Student &amp; Undergraduate Researcher
+                    </p>
+
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- ===== ABOUT ===== -->
+        <section class="section about" id="about">
+            <div class="container">
+
+                <h2 class="section-title">
+                    About <span class="accent">Me</span>
+                </h2>
+
+                <p class="section-subtitle">
+                    My academic background, interests, and future direction.
+                </p>
+
+                <div class="grid-2">
+
+                    <div class="about-copy">
+                        <p>
+                            I am a Civil Engineering undergraduate from
+                            Bangladesh studying at Nantong University in
+                            Jiangsu, China. My academic journey has helped
+                            me develop an interest in the relationship
+                            between structural performance, construction
+                            materials, and environmental sustainability.
+                        </p>
+
+                        <p>
+                            I am particularly interested in finding practical
+                            ways to reuse construction and demolition waste,
+                            improve concrete durability, and reduce the
+                            environmental impact of the built environment.
+                        </p>
+
+                        <p>
+                            My long-term goal is to develop my research and
+                            technical expertise and contribute to sustainable
+                            construction through engineering practice,
+                            postgraduate study, and future academic work.
+                        </p>
+                    </div>
+
+                    <div class="card">
+                        <h3>Personal Information</h3>
+
+                        <ul class="info-list">
+                            <li>
+                                <strong>Field:</strong>
+                                Civil Engineering
+                            </li>
+
+                            <li>
+                                <strong>University:</strong>
+                                Nantong University
+                            </li>
+
+                            <li>
+                                <strong>Study Level:</strong>
+                                Final-year undergraduate
+                            </li>
+
+                            <li>
+                                <strong>Expected Graduation:</strong>
+                                June 2027
+                            </li>
+
+                            <li>
+                                <strong>Academic Focus:</strong>
+                                Sustainable construction
+                            </li>
+
+                            <li>
+                                <strong>Current Location:</strong>
+                                Nantong, Jiangsu, China
+                            </li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+
+        <!-- ===== EDUCATION ===== -->
+        <section class="section" id="education">
+            <div class="container">
+
+                <h2 class="section-title">
+                    Education &amp; <span class="accent">Leadership</span>
+                </h2>
+
+                <p class="section-subtitle">
+                    My academic foundation and university involvement.
+                </p>
+
+                <div class="grid-2">
+
+                    <div class="card">
+                        <div class="timeline">
+
+                            <div class="timeline-item">
+                                <p class="timeline-date">2023 – 2027</p>
+
+                                <h3>
+                                    B.Sc. in Civil Engineering
+                                </h3>
+
+                                <p>Nantong University, China</p>
+
+                                <p>
+                                    Expected graduation: June 2027.
+                                    Academic interests include structural
+                                    engineering, construction materials,
+                                    environmental engineering, and
+                                    sustainable building technologies.
+                                </p>
+                            </div>
+
+                            <div class="timeline-item">
+                                <p class="timeline-date">Scholarship</p>
+
+                                <h3>Second-Class Bachelor's Scholarship</h3>
+
+                                <p>
+                                    Scholarship recipient at Nantong University.
+                                </p>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <h3>Leadership &amp; Activities</h3>
+
+                        <p>
+                            <strong class="accent">Class Monitor</strong>
+                        </p>
+
+                        <p style="margin-bottom:20px;">
+                            Supporting class communication, coordination,
+                            and academic activities.
+                        </p>
+
+                        <p>
+                            <strong class="accent">
+                                Psychological &amp; Activity Monitor
+                            </strong>
+                        </p>
+
+                        <p>
+                            Participating in student engagement,
+                            activity coordination, and peer support.
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+
+        <!-- ===== RESEARCH INTERESTS ===== -->
+        <section class="section about" id="research">
+            <div class="container">
+
+                <h2 class="section-title">
+                    Research <span class="accent">Interests</span>
+                </h2>
+
+                <p class="section-subtitle">
+                    Areas I am exploring through undergraduate research
+                    and independent academic development.
+                </p>
+
+                <div class="grid-3">
+
+                    <div class="card research-card">
+                        <div class="card-icon">♻️</div>
+
+                        <h3>Recycled Construction Materials</h3>
+
+                        <p>
+                            Reuse of construction and demolition waste,
+                            recycled concrete powder, and resource recovery
+                            for more sustainable construction.
+                        </p>
+
+                        <div class="tags">
+                            <span class="tag">Recycling</span>
+                            <span class="tag">Circular Economy</span>
+                        </div>
+                    </div>
+
+                    <div class="card research-card">
+                        <div class="card-icon">🧱</div>
+
+                        <h3>Concrete Durability</h3>
+
+                        <p>
+                            Understanding the behavior of concrete under
+                            environmental exposure, including freeze-thaw
+                            cycles, pore evolution, and material degradation.
+                        </p>
+
+                        <div class="tags">
+                            <span class="tag">Durability</span>
+                            <span class="tag">Microstructure</span>
+                        </div>
+                    </div>
+
+                    <div class="card research-card">
+                        <div class="card-icon">🏗️</div>
+
+                        <h3>Structural Engineering</h3>
+
+                        <p>
+                            Structural behavior, numerical analysis,
+                            structural materials, and the performance
+                            of reinforced concrete systems.
+                        </p>
+
+                        <div class="tags">
+                            <span class="tag">Structural Analysis</span>
+                            <span class="tag">FEM</span>
+                        </div>
+                    </div>
+
+                    <div class="card research-card">
+                        <div class="card-icon">🌱</div>
+
+                        <h3>Sustainable Construction</h3>
+
+                        <p>
+                            Reducing embodied environmental impacts
+                            through eco-efficient materials, resource
+                            efficiency, and sustainable building practices.
+                        </p>
+
+                        <div class="tags">
+                            <span class="tag">Low Carbon</span>
+                            <span class="tag">Sustainability</span>
+                        </div>
+                    </div>
+
+                    <div class="card research-card">
+                        <div class="card-icon">⚗️</div>
+
+                        <h3>Innovative Cement-Based Materials</h3>
+
+                        <p>
+                            Exploring alternative binders, geopolymer
+                            concrete, supplementary materials, and
+                            methods to improve concrete performance.
+                        </p>
+
+                        <div class="tags">
+                            <span class="tag">Geopolymer</span>
+                            <span class="tag">Materials</span>
+                        </div>
+                    </div>
+
+                    <div class="card research-card">
+                        <div class="card-icon">📊</div>
+
+                        <h3>Environmental &amp; Economic Assessment</h3>
+
+                        <p>
+                            Evaluating material performance alongside
+                            environmental impacts, resource use,
+                            and economic considerations.
+                        </p>
+
+                        <div class="tags">
+                            <span class="tag">Life-Cycle Thinking</span>
+                            <span class="tag">Assessment</span>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+
+        <!-- ===== PROJECTS ===== -->
+        <section class="section" id="projects">
+            <div class="container">
+
+                <h2 class="section-title">
+                    Research &amp; <span class="accent">Projects</span>
+                </h2>
+
+                <p class="section-subtitle">
+                    Selected research directions and academic work.
+                    Update these entries with verified project details,
+                    methods, results, and publications.
+                </p>
+
+                <div class="grid-2">
+
+                    <article class="card project-card">
+                        <div class="project-visual">🧊</div>
+
+                        <h3>
+                            Recycled Concrete Under Freeze-Thaw Cycles
+                        </h3>
+
+                        <p>
+                            Investigating pore evolution and changes in
+                            recycled concrete subjected to freeze-thaw
+                            exposure, with a focus on durability and
+                            material behavior.
+                        </p>
+
+                        <div style="margin-top:16px;">
+                            <span class="tag">Concrete</span>
+                            <span class="tag">Freeze-Thaw</span>
+                            <span class="tag">Durability</span>
+                        </div>
+                    </article>
+
+                    <article class="card project-card">
+                        <div class="project-visual">🌍</div>
+
+                        <h3>
+                            Sustainability Evaluation of Recycled
+                            Concrete Powder
+                        </h3>
+
+                        <p>
+                            Exploring an evaluation approach for the
+                            economic and environmental implications
+                            of recycled concrete powder in construction
+                            materials.
+                        </p>
+
+                        <div style="margin-top:16px;">
+                            <span class="tag">Recycled Materials</span>
+                            <span class="tag">Environmental Impact</span>
+                            <span class="tag">Economics</span>
+                        </div>
+                    </article>
+
+                    <article class="card project-card">
+                        <div class="project-visual">🧪</div>
+
+                        <h3>
+                            Cement-Based Material Experiments
+                        </h3>
+
+                        <p>
+                            Undergraduate research involving cement-based
+                            materials and the exploration of material
+                            modifications, experimental behavior, and
+                            potential performance improvements.
+                        </p>
+
+                        <div style="margin-top:16px;">
+                            <span class="tag">Experiments</span>
+                            <span class="tag">Concrete Materials</span>
+                        </div>
+                    </article>
+
+                    <article class="card project-card">
+                        <div class="project-visual">📐</div>
+
+                        <h3>
+                            Structural Analysis &amp; Numerical Methods
+                        </h3>
+
+                        <p>
+                            Academic development in structural mechanics,
+                            numerical analysis, finite element methods,
+                            and engineering problem-solving.
+                        </p>
+
+                        <div style="margin-top:16px;">
+                            <span class="tag">Structural Mechanics</span>
+                            <span class="tag">FEM</span>
+                            <span class="tag">Engineering Analysis</span>
+                        </div>
+                    </article>
+
+                </div>
+
+                <p style="color:var(--muted); margin-top:24px; font-size:13px;">
+                    Note: The project descriptions above summarize research
+                    areas. Add your exact role, supervisor, methods, and
+                    findings only when confirmed.
+                </p>
+
+            </div>
+        </section>
+
+
+        <!-- ===== COURSEWORK ===== -->
+        <section class="section about" id="coursework">
+            <div class="container">
+
+                <h2 class="section-title">
+                    Relevant <span class="accent">Coursework</span>
+                </h2>
+
+                <p class="section-subtitle">
+                    Core subjects supporting my civil engineering
+                    and research interests.
+                </p>
+
+                <div class="grid-3">
+
+                    <div class="card">
+                        <h3>Structural Engineering</h3>
+                        <p>
+                            Structural Mechanics, Engineering Structures,
+                            Mechanics of Materials, and structural analysis.
+                        </p>
+                    </div>
+
+                    <div class="card">
+                        <h3>Construction Materials</h3>
+                        <p>
+                            Civil Engineering Materials, concrete-related
+                            materials, and Construction Technology.
+                        </p>
+                    </div>
+
+                    <div class="card">
+                        <h3>Geotechnical &amp; Fluid</h3>
+                        <p>
+                            Soil Mechanics and Fluid Mechanics.
+                        </p>
+                    </div>
+
+                    <div class="card">
+                        <h3>Environmental Engineering</h3>
+                        <p>
+                            Environmental Engineering and sustainable
+                            construction concepts.
+                        </p>
+                    </div>
+
+                    <div class="card">
+                        <h3>Numerical Methods</h3>
+                        <p>
+                            Numerical Analysis and Engineering Applications,
+                            introductory finite element methods, and
+                            engineering computation.
+                        </p>
+                    </div>
+
+                    <div class="card">
+                        <h3>Science &amp; Computing</h3>
+                        <p>
+                            College Physics I and II, Electrical and
+                            Electronic Technology, and programming.
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+
+        <!-- ===== SKILLS ===== -->
+        <section class="section" id="skills">
+            <div class="container">
+
+                <h2 class="section-title">
+                    Technical <span class="accent">Skills</span>
+                </h2>
+
+                <p class="section-subtitle">
+                    Engineering knowledge and tools relevant to my
+                    academic and research development.
+                </p>
+
+                <div class="grid-2">
+
+                    <div class="card skill-group">
+                        <h3>Engineering Knowledge</h3>
+
+                        <span class="tag">Structural Analysis</span>
+                        <span class="tag">Concrete Technology</span>
+                        <span class="tag">Construction Materials</span>
+                        <span class="tag">Environmental Engineering</span>
+                        <span class="tag">Sustainable Construction</span>
+                        <span class="tag">Numerical Analysis</span>
+                    </div>
+
+                    <div class="card skill-group">
+                        <h3>Software &amp; Digital Tools</h3>
+
+                        <span class="tag">AutoCAD</span>
+                        <span class="tag">Microsoft Excel</span>
+                        <span class="tag">Microsoft Word</span>
+                        <span class="tag">PowerPoint</span>
+                        <span class="tag">Finite Element Methods</span>
+
+                        <p style="margin-top:14px;">
+                            Add ANSYS, MATLAB, Origin, or other software
+                            only if you have actually used it and can
+                            describe your proficiency.
+                        </p>
+                    </div>
+
+                    <div class="card skill-group">
+                        <h3>Research Skills</h3>
+
+                        <span class="tag">Literature Review</span>
+                        <span class="tag">Experimental Research</span>
+                        <span class="tag">Technical Writing</span>
+                        <span class="tag">Data Interpretation</span>
+                    </div>
+
+                    <div class="card skill-group">
+                        <h3>Professional Skills</h3>
+
+                        <span class="tag">Teamwork</span>
+                        <span class="tag">Communication</span>
+                        <span class="tag">Leadership</span>
+                        <span class="tag">Problem Solving</span>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+
+        <!-- ===== CERTIFICATES ===== -->
+        <section class="section about" id="certificates">
+            <div class="container">
+
+                <h2 class="section-title">
+                    Certifications &amp; <span class="accent">Learning</span>
+                </h2>
+
+                <p class="section-subtitle">
+                    Professional development and additional training.
+                </p>
+
+                <div class="grid-2">
+
+                    <div class="card">
+                        <h3>Sustainable Construction</h3>
+
+                        <p>
+                            Holcim Sustainable Construction Academy —
+                            add the exact course title and completion
+                            date after completing the course.
+                        </p>
+                    </div>
+
+                    <div class="card">
+                        <h3>Additional Training</h3>
+
+                        <p>
+                            Add verified certificates in structural
+                            engineering, research methods, engineering
+                            software, or sustainability here.
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+
+        <!-- ===== CONTACT ===== -->
+        <section class="section contact" id="contact">
+            <div class="container">
+
+                <h2 class="section-title">
+                    Let's <span class="accent">Connect</span>
+                </h2>
+
+                <p class="section-subtitle">
+                    I welcome academic connections and discussions
+                    related to civil engineering, sustainable materials,
+                    research opportunities, and postgraduate study.
+                </p>
+
+                <div class="grid-2">
+
+                    <div class="card">
+                        <h3>Email</h3>
+
+                        <p style="margin-bottom:15px;">
+                            For academic communication and research inquiries.
+                        </p>
+
+                        <!-- Replace with your real email -->
+                        <a
+                            class="contact-link"
+                            href="mailto:your.email@example.com">
+                            your.email@example.com
+                        </a>
+                    </div>
+
+                    <div class="card">
+                        <h3>LinkedIn</h3>
+
+                        <p style="margin-bottom:15px;">
+                            Connect with me for academic and professional
+                            networking.
+                        </p>
+
+                        <!-- Replace with your public LinkedIn URL -->
+                        <a
+                            class="contact-link"
+                            href="https://www.linkedin.com/"
+                            target="_blank"
+                            rel="noopener noreferrer">
+                            Visit my LinkedIn profile →
+                        </a>
+                    </div>
+
+                </div>
+
+                <div style="margin-top:28px;">
+                    <a href="#home" class="btn btn-primary">
+                        Back to Top ↑
+                    </a>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+
+    <!-- ===== FOOTER ===== -->
+    <footer>
+        <div class="container">
+            <p>
+                © <span id="year"></span> Shovon A S M Fardin Ahmed.
+                Civil Engineering Portfolio.
+            </p>
+
+            <p style="margin-top:5px;">
+                Designed to reflect my interest in engineering and
+                sustainable development.
+            </p>
+        </div>
+    </footer>
+
+
+    <!-- ===== JAVASCRIPT ===== -->
+    <script>
+        // Automatically update the copyright year
+        document.getElementById("year").textContent =
+            new Date().getFullYear();
+
+        // Mobile navigation menu
+        const menuToggle = document.getElementById("menuToggle");
+        const navLinks = document.getElementById("navLinks");
+
+        menuToggle.addEventListener("click", function () {
+            const isOpen = navLinks.classList.toggle("open");
+
+            menuToggle.setAttribute("aria-expanded", String(isOpen));
+            menuToggle.setAttribute(
+                "aria-label",
+                isOpen ? "Close navigation menu" : "Open navigation menu"
+            );
+
+            menuToggle.textContent = isOpen ? "✕" : "☰";
+        });
+
+        // Close the menu after selecting a navigation link
+        document.querySelectorAll(".nav-links a").forEach(function (link) {
+            link.addEventListener("click", function () {
+                navLinks.classList.remove("open");
+                menuToggle.setAttribute("aria-expanded", "false");
+                menuToggle.setAttribute(
+                    "aria-label",
+                    "Open navigation menu"
+                );
+                menuToggle.textContent = "☰";
+            });
+        });
+    </script>
 
 </body>
 </html>
